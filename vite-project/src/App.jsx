@@ -1,16 +1,29 @@
 import { useState } from 'react'
 import './App.css'
+import './Header'
+import './Footer'
+import './Nav'
+import './main'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <h4>Homepage</h4>
-      </div>
+    <header>
+    <Header />
+    </header>
+    <nav>
+    <Nav />
+    </nav>
+    <main>
+    <Main />
+    </main>
+    <footer>
+    <Footer />
+    </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
