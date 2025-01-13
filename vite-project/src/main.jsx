@@ -1,12 +1,21 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './Header';
+import Nav from './Nav';
+import HomePage from './HomePage';  // Create this component next
+import BookingPage from './BookingPage';  // Create this component later
 
-function main(){
+function App() {
   return (
-    <section>
-      <h1>Welcome to Little Lemon!!</h1>
-      <p>Your favourite spot for delicious meals!!</p>
-    </section>
+    <>
+      <Header />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+      </Routes>
+    </>
   );
 }
 
-export default main;
+export default App;
